@@ -1,9 +1,12 @@
 TEMPLATE = app
 
-QT += qml quick widgets
+QT += qml
+QT += quick
+QT += widgets
+CONFIG += qtquickcompiler
 
 CONFIG += c++11
-
+TARGET = hanoi_solution
 SOURCES += main.cpp \
     source.cpp
 

@@ -14,7 +14,6 @@ private:
     void hanoi(unsigned short disk,unsigned short a,unsigned short b);
 public:
     explicit source();
-
     ~source();
 public slots:
     void start(unsigned short disks, unsigned short towerIn=0, unsigned short towerOut=1);
