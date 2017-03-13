@@ -19,13 +19,15 @@ parts:
   hanoi-solution:
     plugin: qmake
     qt-version: qt5
-    project-files: [source/HanoiSolution.pro]
-    source: source/
+    project-files: [HanoiSolution.pro]
+    source: source
     install: |
      install -d $SNAPCRAFT_PART_INSTALL/opt/myapp
      install hanoi_solution $SNAPCRAFT_PART_INSTALL/opt/myapp/hanoi_solution 
     stage-packages:
+      - qmlscene
       - libqt5qml5
+      - libqt5gui5
       - libqt5quick5
       - qml-module-qtquick2
       - qml-module-qtquick-dialogs
