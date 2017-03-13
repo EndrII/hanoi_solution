@@ -12,14 +12,15 @@ icon: icon.png
 apps:
   hanoi-solution:
     command: desktop-launch $SNAP/opt/myapp/hanoi_solution
+    desktop: "$SNAP/meta/gui/Hanoi Solution.desktop"
     plugs: [home, unity7, x11]
 
 parts:
   hanoi-solution:
     plugin: qmake
     qt-version: qt5
-    project-files: [/media/E/MEGA/UfoByte/hanoi2d/source/HanoiSolution.pro]
-    source: /media/E/MEGA/UfoByte/hanoi2d/source/
+    project-files: [source/HanoiSolution.pro]
+    source: source/
     install: |
      install -d $SNAPCRAFT_PART_INSTALL/opt/myapp
      install hanoi_solution $SNAPCRAFT_PART_INSTALL/opt/myapp/hanoi_solution 

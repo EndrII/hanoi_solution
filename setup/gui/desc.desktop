@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Name=Hanoi Solution
+Comment=This application shows solution for Hanoi Towers.
+Exec=hanoi-solution
+Icon=/snap/hanoi-solution/current/meta/gui/icon.png
+Terminal=false
+Type=Application
+Categories=Utility;Application;Games;
