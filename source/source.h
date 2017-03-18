@@ -4,6 +4,7 @@
 #include <QList>
 #include <QFile>
 #include <QTextStream>
+#include <QFileDialog>
 class source:public QObject
 {
     Q_OBJECT
@@ -17,7 +18,7 @@ public:
     ~source();
 public slots:
     void start(unsigned short disks, unsigned short towerIn=0, unsigned short towerOut=1);
-    void save(QString patch="./result");
+    void save(QString patch);
     QStringList result()const;
 signals:
      void generated();

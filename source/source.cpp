@@ -31,18 +31,6 @@ void source::save(QString patch){
         f.close();
     }
 }
-void source::save(){
-   // patch.remove("file://");
-    QFile f(QFileDialog::getSaveFileUrl(this,"Save Solution dialog"));
-    if(f.open(QIODevice::WriteOnly|QIODevice::Truncate)){
-        QTextStream stream(&f);
-        stream<<"steps="<<QString::number(_result.size())<<"\n";
-        for(int i=0;i<_result.size();i++){
-            stream<<_result[i]<<"\n";
-        }
-        f.close();
-    }
-}
 QStringList source::result()const{
     return _result;
 }
